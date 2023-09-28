@@ -1,0 +1,76 @@
+/* Add this CSS to your component's stylesheet or a global stylesheet */
+
+.cost-container {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.cost-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cost-list li {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cost-list button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cost-list button:hover {
+  background-color: #0056b3;
+}
+
+.create-cost,
+.update-cost {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.create-cost h3,
+.update-cost h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.create-cost input,
+.update-cost input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.create-cost button,
+.update-cost button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.create-cost button:hover,
+.update-cost button:hover {
+  background-color: #0056b3;
+}

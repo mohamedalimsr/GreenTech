@@ -1,0 +1,45 @@
+
+<div class="cost-container">
+  <h2>Cost Management</h2>
+
+  <!-- List of Costs -->
+  <div class="cost-list">
+    <ul>
+      <li *ngFor="let cost of costs">
+        <span>ID: {{ cost.id }}</span>
+        <span>Name: {{ cost.costn }}</span>
+        <span>Unit: {{ cost.unit }}</span>
+        <span>Visibility: {{ cost.visibility }}</span>
+        <span>Themes: {{ cost.themes }}</span>
+        <button (click)="navigateToUpdateCost(cost.id)">Edit</button>
+        <button (click)="deleteCost(cost.id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Create New Cost Form -->
+  <div class="create-cost" *ngIf="isCreatingNewCost">
+    <h3>Create New Cost</h3>
+    <form (submit)="createCost(currentCost)">
+      <!-- Input fields for cost properties -->
+      <input type="text" [(ngModel)]="currentCost.costn" placeholder="Name">
+      <input type="text" [(ngModel)]="currentCost.unit" placeholder="Unit">
+      <input type="text" [(ngModel)]="currentCost.visibility" placeholder="Visibility">
+      <input type="text" [(ngModel)]="currentCost.themes" placeholder="Themes">
+      <button type="submit">Create</button>
+    </form>
+  </div>
+
+  <!-- Update Cost Form -->
+  <div class="update-cost" *ngIf="isUpdatingCost">
+    <h3>Update Cost</h3>
+    <form (submit)="updateCost(currentCost)">
+      <!-- Input fields for cost properties -->
+      <input type="text" [(ngModel)]="currentCost.costn" placeholder="Name">
+      <input type="text" [(ngModel)]="currentCost.unit" placeholder="Unit">
+      <input type="text" [(ngModel)]="currentCost.visibility" placeholder="Visibility">
+      <input type="text" [(ngModel)]="currentCost.themes" placeholder="Themes">
+      <button type="submit">Update</button>
+    </form>
+  </div>
+</div>
